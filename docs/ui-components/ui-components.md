@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Koekohtaiset määräykset
+title: UI Components
 nav_order: 3
 has_children: true
 permalink: /docs/ui-components
 ---
 
-# Koekohtaiset määräykset ja ohjeet
+# UI Components
 
-Koekohtaisissa määräyksissä ja ohjeissa ilmoitetaan mm. kokeen rakenne ja toimeenpano-ohjeet sekä arvosteluperusteet.
+To make it as easy as possible to write documentation in plain Markdown, most UI components are styled using default Markdown elements with few additional CSS classes needed.
 {: .fs-6 .fw-300 }

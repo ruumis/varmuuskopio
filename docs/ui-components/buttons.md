@@ -1,24 +1,12 @@
 ---
 layout: default
-title: Äidinkielen ja kirjallisuuden kokeen määräykset
-parent: Koekohtaiset määräykset
+title: Buttons
+parent: UI Components
 nav_order: 2
 ---
 
-# Äidinkielen ja kirjallisuuden kokeen määräykset
+# Buttons
 {: .no_toc }
-
-Hyväksytty 13.12.2019, julkaistu 4.2.2022
-
-Äidinkielen ja kirjallisuuden kokeen määräykset sisältävät mm. ylioppilastutkintoa koskevaan lain-
-säädäntöön perustuvaa tekstiä. Tekstissä olevat pykälämerkinnät viittaavat lukiolakiin (714/2018),
-kumottuun lukiolakiin (629/1998), ylioppilastutkinnosta annettuun lakiin (502/2019), kumottuun
-ylioppilastutkinnon järjestämisestä annettuun lakiin (672/2005), ylioppilastutkinnosta annettuun
-asetukseen (612/2019) ja kumottuun ylioppilastutkinnosta annettuun asetukseen (915/2005), ellei
-toisin ilmoiteta.
-
-Äidinkielen ja kirjallisuuden kokeen määräykset koskevat ensimmäisen kerran kevään 2022 tutkinnon
-toimeenpanoa.
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -28,19 +16,82 @@ toimeenpanoa.
 
 ---
 
-## Äidinkielen ja kirjallisuuden koe
+## Basic button styles
 
-Ylioppilastutkintoon osallistuvan on suoritettava äidinkielessä ja kirjallisuudessa järjestettävä koe
-(L 502/2019, 10 §). Äidinkielen ja kirjallisuuden kokeet järjestetään suomen, ruotsin ja saamen kie-
-lissä (L 502/2019, 3 §).
+### Links that look like buttons
 
-Kokeessa arvioidaan lukion äidinkielen ja kirjallisuuden opetussuunnitelman perusteiden mukaisten
-tavoitteiden saavuttamista sekä kokelaan kypsyyttä ja valmiuksia jatko-opintoihin.
-Ylioppilastutkintoon osallistuminen edellyttää, että lukion oppimäärää suorittava on ennen osallis-
-tumista tutkintoon kuuluvaan kokeeseen opiskellut lukiolain 11 §:ssä tarkoitetun tuntijaon mukaiset
-pakolliset kurssit aineessa, jonka kokeeseen hän osallistuu (L 502/2019, 7 §).
+<div class="code-example" markdown="1">
+[Link button](http://example.com/){: .btn }
 
-Kokelas voi suorittaa toisen kotimaisen kielen kokeen sijasta äidinkieleltään ruotsin- tai suomenkie-
-lisille kokelaille tarkoitetun äidinkielen ja kirjallisuuden kokeen kyseisessä kielessä (L 502/2019, 11
-§). Kokelas voi suorittaa vieraan kielen kokeen sijasta äidinkielen ja kirjallisuuden kokeen saamen
-kielessä (L 502/2019, 11 §).
+[Link button](http://example.com/){: .btn .btn-purple }
+[Link button](http://example.com/){: .btn .btn-blue }
+[Link button](http://example.com/){: .btn .btn-green }
+
+[Link button](http://example.com/){: .btn .btn-outline }
+</div>
+```markdown
+[Link button](http://example.com/){: .btn }
+
+[Link button](http://example.com/){: .btn .btn-purple }
+[Link button](http://example.com/){: .btn .btn-blue }
+[Link button](http://example.com/){: .btn .btn-green }
+
+[Link button](http://example.com/){: .btn .btn-outline }
+```
+
+### Button element
+
+GitHub Flavored Markdown does not support the `button` element, so you'll have to use inline HTML for this:
+
+<div class="code-example">
+<button type="button" name="button" class="btn">Button element</button>
+</div>
+```html
+<button type="button" name="button" class="btn">Button element</button>
+```
+
+---
+
+## Using utilities with buttons
+
+### Button size
+
+Wrap the button in a container that uses the [font-size utility classes]({% link docs/utilities/typography.md %}) to scale buttons:
+
+<div class="code-example" markdown="1">
+<span class="fs-6">
+[Big ass button](http://example.com/){: .btn }
+</span>
+
+<span class="fs-3">
+[Tiny ass button](http://example.com/){: .btn }
+</span>
+</div>
+```markdown
+<span class="fs-8">
+[Link button](http://example.com/){: .btn }
+</span>
+
+<span class="fs-3">
+[Tiny ass button](http://example.com/){: .btn }
+</span>
+```
+
+### Spacing between buttons
+
+Use the [margin utility classes]({% link docs/utilities/layout.md %}#spacing) to add spacing between two buttons in the same block.
+
+<div class="code-example" markdown="1">
+[Button with space](http://example.com/){: .btn .btn-purple .mr-2 }
+[Button](http://example.com/){: .btn .btn-blue }
+
+[Button with more space](http://example.com/){: .btn .btn-green .mr-4 }
+[Button](http://example.com/){: .btn .btn-blue }
+</div>
+```markdown
+[Button with space](http://example.com/){: .btn .btn-purple .mr-2 }
+[Button](http://example.com/){: .btn .btn-blue }
+
+[Button with more space](http://example.com/){: .btn .btn-green .mr-4 }
+[Button](http://example.com/){: .btn .btn-blue }
+```
